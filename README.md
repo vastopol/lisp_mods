@@ -8,8 +8,3 @@ examining modularity of the lisp interpreter
 * two  - decomposition of state, side effects as a mechanism
 
 * ex   - examples in scheme
-
-for the most part follows the syntax in the research papers,
-however scheme's syntax has changed a little since 1976:
-* t -> #t
-* numberp -> number?

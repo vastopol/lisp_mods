@@ -10,7 +10,7 @@
         (cond ((number? x)
                (cond ((number? y) (= x y))
                       (#t nil)))
-              ((atom x) (eq x y))
+              ((atom x) (eq? x y))
               ((atom y) nil)
               ((equal (car x) (car y))
                (equal (cdr x) (cdr y)))))
