@@ -22,3 +22,9 @@ possible work around:
 `(define atom? (lambda (x) (not (pair? x))))`
 
 2.) etc...
+
+all the calls to `error` give warning: "The procedure #[compiled-procedure 13 ("error" #x6a) #x1a #x1b7bada] has been called with 0 arguments; it requires at least 1 argument.""
+
+not sure what are:
+* primop
+* primop-apply

@@ -1,13 +1,13 @@
 ; interpreter version zero
 
-: part 1
+; part 1
 ; top level driver loop for a recursion equations interpreter
-; driver-loop takes a list of the primitive procedures as its first argument ***** FIXME: currently empty list *****
+; driver-loop takes a list of the primitive procedures as its first argument ***** FIXME currently empty list *****
 
 (define (driver)
         (driver-loop `() (print '|lisp is listening|)))
 
-(define (driver-loop procedures hunoz) ; what is hunoz ?
+(define (driver-loop procedures whoknows) ; what is whoknows ?
         (driver-loop-1 procedures (read)))
 
 (define (driver-loop-1 procedures form)
@@ -58,6 +58,26 @@
 
 ;-------------------------------------------------------------------------------
 
-
 ; part 3
 ; utility routines for maintaining environments
+
+(define (bind vars args env)
+        (cond ((= (length vars) (length args))
+               cons (cons vars args) env))
+              (#t (error)))
+
+(define (value name env)
+        (value1 name (lookup name env)))
+
+(define (value1 name slot)
+        (cond ((eq? slot `&unbound) (error))
+              (#t (car slot))))
+
+(define (lookup name env)
+        (cond ((null? env) `&unbound)
+              (#t (lookup1 name (caar env) (cdr env) env))))
+
+(define (lookup1 name vars vals env)
+        (cond ((null? vars) (lookup name (cdr env)))
+              ((eq? name (car vars)) vals)
+              (#t (lookup1 name (cdr vars) (cdr vals) env))))
