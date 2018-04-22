@@ -1,0 +1,17 @@
+* basics
+  * allows no free variables except for names of primitive or defined procedures
+  * no definition of procedures within procedures
+  * the driver loop reads in and saves definitions of procedures of the form:
+    * (define (f a b c ...) <expression in a b c ... and f g h ...>)
+  * it can also read in requests to apply some defined procedure to some arguments and print the results
+  * an expression can consist of variable references, constants, procedure calls and conditional expressions
+  * the defined procedures can refer to each other and the initially provided primitive procedures
+  * definitions may contain forward references as long as all necessary definitions are present at the time of a request for computation
+  * the language is intended to be evaluated in applicative order
+  * all arguments to a procedure are fully evaluated before an attempt is made to apply the procedure to the arguments
+
+* driver loop
+  * ...
+
+* evaluator
+  * ...
