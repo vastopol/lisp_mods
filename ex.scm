@@ -1,5 +1,7 @@
 ; some examples of functions written in scheme
 
+; note interpreter zero cant handle: mapcar, etc...
+
 (define (second x) (car (cdr x)))
 
 (define (factorial x)
@@ -14,3 +16,8 @@
               ((atom y) nil)
               ((equal (car x) (car y))
                (equal (cdr x) (cdr y)))))
+
+(define (mapcar f l)
+        (cond (( null? l) `())
+              (#t (cons (f (car l))
+                         (mapcar f (cdr l))))))
