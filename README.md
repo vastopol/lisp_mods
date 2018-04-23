@@ -1,10 +1,10 @@
 # lisp_mods
 examining modularity of the lisp interpreter
 
-* zero - restricted dialect, basic structure
+AIM-453 : The Art of the Interpreter
 
-* one  - procedural data as an abstraction, variable scoping lexical/dynamic
+* 0 - restricted dialect, basic structure
 
-* two  - decomposition of state, side effects as a mechanism
+* 1  - procedural data as an abstraction, variable scoping lexical/dynamic
 
-* ex   - examples in scheme
+* 2  - decomposition of state, side effects as a mechanism

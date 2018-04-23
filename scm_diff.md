@@ -1,6 +1,6 @@
 # differences
 implementing this project in scheme presents some challenges since the language is slightly different than the one used in the research papers.
-for the most part, this follows the syntax in the research papers as closely as possible, however some syntax has changed since 1976:
+for the most part, this follows the syntax in the research papers as closely as possible, however some syntax has changed since 1978:
 
 * `t -> #t`
 * `eq -> eq?`
